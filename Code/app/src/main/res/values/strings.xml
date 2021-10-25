@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">SBTechincalTest</string>
+    <!--region Login-->
+    <string name="login_header">Welcome back</string>
+    <string name="login_subheader">Log in to your Student Beans account</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_button_text">Log in</string>
+    <!--endregion-->
+
+    <!--region Photos-->
+    <string name="photos_title">Photos</string>
+    <!--endregion-->
 </resources>

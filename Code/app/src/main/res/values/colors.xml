@@ -3,4 +3,9 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="beans_blue">#1CBDCF</color>
+    <color name="beans_white">#FFFFFF</color>
+    <color name="beans_light_grey">#EFF4F4</color>
+    <color name="beans_dark_grey">#272727</color>
 </resources>
