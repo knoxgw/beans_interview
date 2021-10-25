@@ -1,7 +1,7 @@
 package com.example.sbtechincaltest.data.remote
 
 import com.example.sbtechincaltest.data.PhotosDataSource
-import com.example.sbtechincaltest.photos.Photo
+import com.example.sbtechincaltest.data.internal.Photo
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

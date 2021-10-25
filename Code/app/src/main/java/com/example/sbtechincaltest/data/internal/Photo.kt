@@ -1,4 +1,4 @@
-package com.example.sbtechincaltest.photos
+package com.example.sbtechincaltest.data.internal
 
 data class Photo(val title: String, private val _url: String) {
     // API is missing the suffix on images but Glide requires it
