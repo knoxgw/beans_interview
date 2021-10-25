@@ -29,11 +29,8 @@ object ApiClient {
         return servicesApiInterface as ServicesApiInterface
     }
 
-    private fun interceptor(): HttpLoggingInterceptor {
-        val httpLoggingInterceptor = HttpLoggingInterceptor()
-        httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
-        return httpLoggingInterceptor
-    }
+    private fun interceptor(): HttpLoggingInterceptor =
+        HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY  }
 
     interface ServicesApiInterface {
         @GET("/photos")

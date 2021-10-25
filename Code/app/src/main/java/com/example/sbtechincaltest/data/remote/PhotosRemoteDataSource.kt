@@ -13,13 +13,13 @@ class PhotosRemoteDataSource(apiClient: ApiClient) : PhotosDataSource {
 
     override fun fetchPhotos(callback: OperationCallback<Photo>) {
         call = service.photos()
-        call?.enqueue( object : Callback<List<PhotosApiDto>>{
+        call?.enqueue(object : Callback<List<PhotosApiDto>> {
             override fun onResponse(
                 call: Call<List<PhotosApiDto>>,
                 response: Response<List<PhotosApiDto>>
             ) {
                 response.body()?.let {
-                    if(response.isSuccessful) {
+                    if (response.isSuccessful) {
                         callback.onSuccess(mapApiToInternalDto(it))
                     } else {
                         callback.onError(response.message()) // probably want better error handling here
