@@ -10,12 +10,10 @@ import com.example.sbtechincaltest.data.remote.ApiClient
 import com.example.sbtechincaltest.data.remote.OperationCallback
 import com.example.sbtechincaltest.data.remote.PhotosRemoteDataSource
 
-class PhotosViewModel : ViewModel() {
+class PhotosViewModel(private val photosRepository: PhotosRepository) : ViewModel() {
 
     private val _requestState = MutableLiveData<RequestState<List<Photo>>>()
     val requestState : LiveData<RequestState<List<Photo>>> = _requestState
-
-    private val photosRepository = PhotosRepository(PhotosRemoteDataSource(ApiClient)) // should be inserted via DI
 
     fun fetchPhotos() {
         _requestState.value = RequestState.Pending()

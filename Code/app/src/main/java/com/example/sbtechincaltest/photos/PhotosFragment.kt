@@ -13,11 +13,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.sbtechincaltest.R
 import com.example.sbtechincaltest.data.internal.RequestState
 import com.example.sbtechincaltest.databinding.FragmentPhotosBinding
+import com.example.sbtechincaltest.di.Injection
 import com.example.sbtechincaltest.toast
 
 class PhotosFragment : Fragment() {
 
-    private val viewModel: PhotosViewModel by activityViewModels()
+    private val viewModel: PhotosViewModel by activityViewModels {
+        Injection.provideViewModelFactory()
+    }
 
     private var _binding: FragmentPhotosBinding? = null
     private val binding get() = _binding!!
@@ -44,6 +47,7 @@ class PhotosFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        Injection.destroy()
     }
 
     private fun subscribeUi(adapter: PhotosAdapter) {
